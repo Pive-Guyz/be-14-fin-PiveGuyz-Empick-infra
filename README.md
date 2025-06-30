@@ -17,32 +17,8 @@ Empick은 **Multi-VPC 아키텍처**를 기반으로 한 현대적인 웹 애플
 
 ## 🏛️ 아키텍처 구조
 
-```
-🌐 Internet
-    │
-    ├── VPC1 Frontend (172.16.0.0/16)
-    │   ├── AZ-A: Public Subnet (172.16.1.0/24)
-    │   │   └── Nginx Blue Instance
-    │   ├── AZ-C: Public Subnet (172.16.2.0/24)
-    │   │   └── Nginx Green Instance
-    │   ├── Application Load Balancer
-    │   ├── Route 53 (DNS)
-    │   └── CloudFront (CDN)
-    │
-    └── VPC2 Backend (10.0.0.0/16)
-        ├── AZ-A: Public Subnet (10.0.1.0/24)
-        │   ├── Bastion Host
-        │   └── NAT Gateway
-        ├── AZ-A: Private Subnet (10.0.11.0/24)
-        │   └── Spring Boot Instance
-        ├── AZ-C: Public Subnet (10.0.2.0/24)
-        │   └── NAT Gateway
-        ├── AZ-C: Private Subnet (10.0.12.0/24)
-        │   ├── RDS MariaDB
-        │   └── Redis Cache
-        ├── Application Load Balancer
-        └── Auto Scaling Group
-```
+<img width="1404" alt="architecture" src="https://github.com/user-attachments/assets/a49e3aea-e8bf-4fbf-8b21-ab44c7a31912" />
+
 
 ## 🛠️ 기술 스택
 
